@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right top, rgba(19, 83, 99, 0.89), 
+                rgba(188, 249, 253, 0.733) );
+}
+
+.container{
+    text-align: center;
+    padding: 50px;
+    width: 800px;
+    background: rgba(255, 255, 255, 0.2);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    backdrop-filter: blur(10px);
+}
+
+.circle::before{
+    position: absolute;
+    content: '';
+    margin: -200px -200px;
+    background: linear-gradient(to left top, rgb(17, 123, 150),
+    rgba(173, 243, 248, 0.678) );
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.circle::after{
+    position: absolute;
+    content: '';
+    margin: 50px 680px;
+    background: linear-gradient(to right top, rgba(17, 123, 150, 0.89),
+    rgba(173, 243, 248, 0.541) );
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container h1{
+    letter-spacing: 2px;
+    color: rgb(16, 104, 126);
+    padding-bottom: 30px;
+    font-size: 35px;
+    margin-top: -20px;
+    font-weight: 600;
+}
+
+.container .score{
+    position: relative;
+    margin-left: 220px;
+    height: 80px;
+    width: 250px;
+    border-radius: 10px;
+    border: 2px solid rgb(16, 104, 126);
+}
+
+.container .score .player{
+    background-color: white;
+    font-size: 15px;
+    width: 100px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.container .score #player1{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+.container .score #player2{
+    position: absolute;
+    top: -10px;
+    right: 10px;
+}
+
+.container .score span{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.message{
+    padding-top: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.container .hands{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+}
+
+.container .hands .hand{
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.container .hands #p img{
+    margin-left: -2px;
+}
+
+.container .hands #r img{
+    margin-left: -10px;
+}
+.container .hands #s img{
+    margin-left: 10px;
+}
+
+.container .hands .hand:hover{
+    background-color: rgba(14, 53, 90, 0.3);
+    transform: scale(1.1);
+}
+
+.green-text{
+    color: green;
+    text-shadow: 0 0 10px rgba(143, 209, 36, 0.9);
+}
+.red-text{
+    color: rgb(145, 6, 6);
+    text-shadow: 0 0 10px rgba(209, 36, 36, 0.9);
+}
+.gray-text{
+    color: rgb(52, 53, 52);
+    text-shadow: 0 0 10px rgba(73, 66, 66, 0.9);
+}
+
+.green{
+    border: 3px solid yellowgreen;
+    background-color: rgba(180, 241, 81, 0.2);
+    box-shadow: 0px 0px 30px rgba(143, 209, 36, 0.9),
+    0px 0px 40px rgba(95, 236, 13, 0.6),
+    0px 0px 50px rgba(120, 236, 11, 0.3);
+}
+
+.red{
+    border: 3px solid rgb(247, 3, 3);
+    background-color: rgba(247, 3, 3, 0.2);
+    box-shadow: 0px 0px 30px rgba(209, 36, 36, 0.9),
+    0px 0px 40px rgba(236, 13, 13, 0.6),
+    0px 0px 50px rgba(236, 11, 11, 0.3);
+}
+
+.gray{
+    border: 3px solid rgb(10, 10, 10);
+    background-color: rgba(10, 10, 10, 0.2);
+    box-shadow: 0px 0px 30px rgba(73, 66, 66, 0.9),
+    0px 0px 40px rgba(53, 49, 49, 0.6),
+    0px 0px 50px rgba(12, 12, 12, 0.3);
+}
